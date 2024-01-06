@@ -2,8 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:minimal_chat_appl/pages/settings_page.dart';
 
+import '../auth/auth_service.dart';
+
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
+
+  void logout() {
+    //get auth service
+    final _auth = AuthService();
+    _auth.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,8 +68,9 @@ class AppDrawer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 25.0, bottom: 31),
               child: ListTile(
-                title: Text("L o  g o u t"),
+                title: Text("L o g o u t"),
                 leading: Icon(Icons.logout),
+                onTap: logout,
               ),
             ),
           ],
