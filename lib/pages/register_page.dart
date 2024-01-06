@@ -40,7 +40,7 @@ class RegisterPage extends StatelessWidget {
     else {
       showDialog(
         context: context,
-        builder: (context) => AlertDialog(
+        builder: (context) => const AlertDialog(
           title: Text("Passwords do not match"),
         ),
       );

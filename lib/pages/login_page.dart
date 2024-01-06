@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
     catch (e) {
       showDialog(
         context: context,
-        builder: (context) => AlertDialog(
+        builder: (context) => const AlertDialog(
           title: Text("Wrong Email or Password"),
         ),
       );

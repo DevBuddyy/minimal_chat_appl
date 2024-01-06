@@ -23,7 +23,7 @@ class AppDrawer extends StatelessWidget {
             Column(
               children: [
                 //logo
-                DrawerHeader(
+                const DrawerHeader(
                   child: Center(
                     child: Icon(
                       CupertinoIcons.chat_bubble_2,
@@ -36,8 +36,8 @@ class AppDrawer extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 25.0),
                   child: ListTile(
-                    title: Text("H o m e"),
-                    leading: Icon(Icons.home),
+                    title: const Text("H o m e"),
+                    leading: const Icon(Icons.home),
                     onTap: () {
                       //drwer pops in
                       Navigator.pop(context);
@@ -48,9 +48,9 @@ class AppDrawer extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 25.0),
                   child: ListTile(
-                      title: Text("S e t t i n g s"),
+                      title: const Text("S e t t i n g s"),
                       //pop in the drawer
-                      leading: Icon(Icons.settings),
+                      leading: const Icon(Icons.settings),
                       onTap: () {
                         Navigator.pop(context);
                         //go to settings page
@@ -68,8 +68,8 @@ class AppDrawer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 25.0, bottom: 31),
               child: ListTile(
-                title: Text("L o g o u t"),
-                leading: Icon(Icons.logout),
+                title: const Text("L o g o u t"),
+                leading: const Icon(Icons.logout),
                 onTap: logout,
               ),
             ),
